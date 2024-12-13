@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danijel Vlajić - Sajt</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Zaglavlje -->
+    <header>
+        <h1>Dobrodošli na moj sajt!</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Početna</a></li>
+                <li><a href="#" onclick="showPage('about')">O meni</a></li>
+                <li><a href="#" onclick="showPage('contact')">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Glavni sadržaj -->
+    <main>
+        <section id="home" class="page-content">
+            <h2>Dobrodošli na moju stranicu!</h2>
+            <img src="slike/slika1.jpg" alt="Pejzaž snimljen aparatom">
+            <p>Na ovom sajtu možete saznati više o mom radu, opremi koju koristim, kao i kontaktirati me za saradnju.</p>
+        </section>
+
+        <section id="about" class="page-content" style="display:none;">
+            <h2>O meni</h2>
+            <img src="slike/slika2.webp" alt="Aparat za snimanje">
+            <p>Već dugi niz godina bavim se snimanjem i kreiranjem sadržaja. Kroz svoj rad sam stekao bogato iskustvo u snimanju emisija, proslava, konferencija i zabava. Svojim radom želim da zabeležim najlepše trenutke i podelim ih sa drugima.</p>
+            <p>Koristim najnoviju opremu i uvijek se trudim da sadržaj bude što kvalitetniji i kreativan.</p>
+        </section>
+
+        <section id="contact" class="page-content" style="display:none;">
+            <h2>Kontaktirajte me</h2>
+            <p>Ako želite da sarađujete, snimate emisije, događaje, proslave ili bilo koji drugi projekat, slobodno me kontaktirajte putem sledećih informacija:</p>
+            <ul>
+                <li>Email: danijelvlajic@example.com</li>
+                <li>Telefon: 066 526 05 95</li>
+            </ul>
+            <p>Specijalizujem se za snimanje raznih događaja, uključujući:</p>
+            <ul>
+                <li>Snimanje emisija</li>
+                <li>Snimanje proslava</li>
+                <li>Snimanje konferencija</li>
+                <li>Snimanje zabava i žurki</li>
+            </ul>
+            <img src="slike/slika3.jpg" alt="Snimanje pejzaža">
+        </section>
+    </main>
+
+    <!-- Podnožje -->
+    <footer>
+        <p>&copy; 2024 Danijel Vlajić</p>
+    </footer>
+
+    <!-- JavaScript za dinamičko prebacivanje sadržaja -->
+    <script>
+        function showPage(page) {
+            // Sakrij sve sekcije
+            const sections = document.querySelectorAll('.page-content');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Prikaži sekciju koja je izabrana
+            const selectedSection = document.getElementById(page);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
